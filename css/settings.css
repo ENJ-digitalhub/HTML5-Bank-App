@@ -6,9 +6,80 @@
 }
 
 .container{
+    min-height: 100vh;
     color: var(--text-main);
     background-color: var(--bg-main);
 }
 
-.container{
+/* header part */
+.container header{
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--bg-secondary);
+    background-color: var(--bg-main);
+}
+
+.container header .logo h2{
+    color: var(--primary);
+}
+
+.container header .img-icon img{
+    width: 50px;
+}
+
+.container .sub-container {
+    display: grid;
+    grid-template-columns: 250px 1fr; 
+    gap: 20px;
+}
+
+.container .sub-container nav {
+    position: sticky;
+    top: 80px;
+    align-self: start;               
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    height: calc(100vh - 80px);
+}
+
+.container .sub-container nav ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+
+.container .sub-container nav a{
+    display: block;
+    color: var(--text-main);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+}
+
+.container .sub-container nav a:hover{
+    background-color: var(--primary-hover);
+    opacity: 0.5;
+    color: var(--bg-main);
+    border-left: 4px solid var(--primary);
+}
+
+.container .sub-container nav a.active{
+    background-color: var(--primary);
+    color: var(--bg-main);
+}
+
+.container .sub-container nav ul li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.container .sub-container .main-body{
+ 
 }
