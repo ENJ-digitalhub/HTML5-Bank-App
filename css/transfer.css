@@ -163,9 +163,8 @@ section{
     padding-inline: var(--padding-md);
 }
 
-
 div.display{
-    width: 1000px;
+    width: 950px;
     overflow-y: hidden;
     scrollbar-width: none;
 }
