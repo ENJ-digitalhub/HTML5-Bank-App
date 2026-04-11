@@ -199,7 +199,8 @@ div.sections span{
 }
 
 div.sections input,
-div.sections select{
+div.sections select,
+div.sections textarea{
     background: var(--bg-main);
     border: 2px solid var(--border-color);
     padding: var(--padding-sm);
