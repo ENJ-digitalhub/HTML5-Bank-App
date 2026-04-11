@@ -1,90 +1,595 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Settings</title>
 
     <!-- link to css-->
-    <link rel="stylesheet" href="css/settings.css">
-    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/root.css" />
 
     <!-- link to font - awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Google font poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Material icons link -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
-    rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <main class="container">
-        <!-- Header part-->
-        <header>
-            <div class="logo">
-                <h2>PayWare</h2>
+      <!-- Header part-->
+      <header>
+        <div class="logo">
+          <h2>PayWare</h2>
+        </div>
+
+        <div class="img-icon">
+          <img src="img/default.png" alt="" />
+        </div>
+      </header>
+
+      <!-- side navigation and main body -->
+      <div class="sub-container">
+        <!-- side navigation -->
+        <nav>
+          <h3>Main</h3>
+
+          <ul>
+            <a href="">
+              <li>
+                <i class="fa-solid fa-diamond"></i>
+                <p>Dashboard</p>
+              </li>
+            </a>
+
+            <a href="">
+              <li>
+                <span class="material-symbols-outlined">north_east</span>
+                <p>Transfer</p>
+              </li>
+            </a>
+
+            <a href="">
+              <li>
+                <i class="fas fa-history"></i>
+                <p>History</p>
+              </li>
+            </a>
+
+            <a href="">
+              <li>
+                <i class="fas fa-gear"></i>
+                <p>Profile</p>
+              </li>
+            </a>
+
+            <a href="">
+              <li>
+                <i class="fas fa-arrow-left"></i>
+                <p>Sign Out</p>
+              </li>
+            </a>
+          </ul>
+        </nav>
+
+        <!-- main body -->
+        <section class="main-body">
+          <div class="header">
+            <p>ACCOUNT</p>
+            <h1>Profile & Settings</h1>
+          </div>
+
+          <div class="name-card">
+            <div class="user-img">
+              <i class="fas fa-user"></i>
             </div>
 
-            <div class="img-icon">
-                <img src="img/default.png" alt="">
+            <div class="name">
+              <div class="name-hld">
+                <h2>John Doe</h2>
+                <p>Member since Jan 2024 . verified</p>
+              </div>
+              <button>Change Photo</button>
             </div>
-        </header>
+          </div>
 
-        <!-- side navigation and main body -->
-       <div class="sub-container">
+          <!-- personnal info and security -->
+          <div class="info-security">
+            <div class="personal-info">
+              <form action="">
+                <h2>Personal Info</h2>
 
-            <!-- side navigation -->
-             <nav>
-                <h3>Main</h3>
+                <div class="input-field">
+                  <label for="fullname">FULL NAME</label>
+                  <input type="text" placeholder="John Doe" name="fullname" />
+                </div>
 
-                <ul>
-                    <a href="">
-                        <li>
-                            <i class="fa-solid fa-diamond"></i>
-                            <p>Dashboard</p>
-                        </li>
-                    </a>
+                <div class="input-field">
+                  <label for="email">EMAIL</label>
+                  <input
+                    type="email"
+                    placeholder="john.doe@example.com"
+                    name="email"
+                  />
+                </div>
 
-                    <a href="">
-                        <li>
-                           <span class="material-symbols-outlined">north_east</span>
-                            <p>Trasnfer</p>
-                        </li>
-                    </a>
+                <div class="input-field">
+                  <label for="phone">PHONE NUMBER</label>
+                  <input type="tel" placeholder="+1 234 567 890" name="phone" />
+                </div>
 
-                    <a href="">
-                        <li>
-                            <i class="fas fa-history"></i>
-                            <p>History</p>
-                        </li>
-                    </a>
+                <div class="input-field">
+                  <label for="dob">DATE OF BIRTH</label>
+                  <input type="date" placeholder="01/01/1990" name="dob" />
+                </div>
 
-                    <a href="">
-                        <li>
-                            <i class="fas fa-gear"></i>
-                            <p>Profile</p>
-                        </li>
-                    </a>
+                <button type="submit">Save Changes</button>
+              </form>
+            </div>
 
-                    <a href="">
-                        <li>
-                            <i class="fas fa-arrow-left"></i>
-                            <p>Sign Out</p>
-                        </li>
-                    </a>
-                </ul>
-             </nav>
+            <div class="right-column">
+              <!-- Security -->
+              <div class="security">
+                <div class="security-header">
+                  <h2>Security</h2>
+                </div>
 
-            <!-- main body -->
-             <section class="main-body">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid consequuntur hic explicabo alias unde ducimus fugit distinctio, qui velit harum numquam veritatis? Deleniti placeat itaque suscipit, nesciunt quia impedit nulla nisi repellat, ipsam adipisci eligendi assumenda fuga! Perspiciatis facilis distinctio sed quos. Vitae, aliquam. Qui voluptatem aperiam consequuntur assumenda corporis. Iure at magnam hic vel adipisci eum optio provident debitis ex. Voluptas cumque sed distinctio iure ab quis blanditiis, voluptatibus natus exercitationem nostrum dolorem corporis dignissimos accusantium debitis magni non dolore corrupti hic fuga ipsa facilis sequi veritatis culpa autem! Quam, quasi? Laudantium magni animi ducimus doloribus, porro itaque culpa voluptate quidem non voluptas dolor obcaecati numquam. Voluptates, tempore dolorem ullam neque illum similique officiis quam maxime perspiciatis modi aliquam, dicta ab aliquid vero quod soluta alias adipisci nam sit. Id nam, optio reiciendis, ullam itaque fugiat animi ipsum dignissimos necessitatibus, molestias magnam accusamus nostrum corporis repudiandae exercitationem porro quisquam dolorum soluta ratione omnis aliquam? Beatae voluptas culpa ducimus molestiae quod hic, explicabo ad quis obcaecati pariatur officia porro officiis minus eveniet animi praesentium laudantium architecto dignissimos saepe nobis. Alias voluptatibus quidem placeat laboriosam, debitis labore ad similique provident quod mollitia natus eum, aliquid ea molestiae. Fugiat eos obcaecati debitis, dolores nam repellat, perferendis temporibus vel dolorum quae quo in vero dignissimos molestiae incidunt similique dolorem. Quasi voluptatem sit quibusdam amet natus, enim deleniti. Explicabo, assumenda iste? Sequi nisi id laborum doloribus ipsam, incidunt officia quia qui, nesciunt voluptates dolorem ab facere molestias tempore. Pariatur reiciendis quaerat eveniet aliquam! Dolorem architecto nam laboriosam eum mollitia illo corporis non consectetur repellat, odit aperiam id ex veritatis hic fugiat vel provident. Delectus amet quod cupiditate. Nihil odit harum deleniti expedita quaerat provident sint voluptatem, quis ut, vero nesciunt nobis nulla eius adipisci. Consectetur quo iure soluta earum nemo ad placeat dolor enim ex nesciunt quam nam nisi fugit odio, delectus provident porro quibusdam ea impedit necessitatibus mollitia. Sapiente est dicta veniam dolor quibusdam laudantium placeat fugit, aliquid quod, aspernatur molestiae, dolore quaerat nesciunt ducimus soluta doloribus impedit pariatur ut esse at numquam enim voluptate deserunt laboriosam. Est tempora qui adipisci tempore illo corporis quos, impedit harum expedita ullam ratione eveniet deserunt dolores minus recusandae dolorum odio neque quae. Dolorum rem nesciunt dolor. Recusandae fugit totam tenetur illo voluptatem quaerat id exercitationem rem nostrum, earum corporis sint at impedit unde ea sapiente, suscipit natus! Provident iusto rem eaque saepe repellat impedit, at hic, illum alias voluptates iste. Dignissimos, consectetur necessitatibus! Soluta quis a temporibus quam aspernatur, non eius hic minima. Commodi cum dolorum fugiat ipsa ullam accusamus quis cumque, numquam inventore, perspiciatis ipsam corporis doloremque ducimus vitae quae reiciendis aliquam explicabo eligendi nihil perferendis natus reprehenderit labore, magni iusto? Possimus provident vitae quia, sapiente accusantium beatae molestiae aut esse aperiam eligendi quidem incidunt excepturi, ducimus tempora ut necessitatibus fugiat eos dignissimos nisi. Corrupti repellat officia obcaecati, harum itaque natus ducimus consequuntur nemo provident minus sunt modi voluptatum ex excepturi illo perspiciatis quod ea praesentium accusantium reiciendis ullam doloremque inventore placeat quibusdam. Accusamus, amet libero velit magni asperiores unde repellendus repellat odio iste debitis temporibus in voluptatem laborum commodi eum ipsum error necessitatibus nobis. Unde quae, iure eaque maxime non, reiciendis quis cum dicta id veniam hic mollitia minima earum exercitationem atque, quasi magnam tenetur dolore. Vitae laborum placeat, molestias sapiente eum consequatur quaerat, autem itaque facere enim facilis minima, a aspernatur neque deserunt ratione sit nesciunt. Odit et magni inventore corporis excepturi! Quas, sapiente, repudiandae dicta atque eveniet itaque officia delectus obcaecati nemo iste dolores quae incidunt fugit magni sed velit soluta omnis iusto. Eaque quibusdam velit culpa quisquam ducimus libero molestias! Exercitationem amet ipsum, voluptatem velit, autem doloremque et illo suscipit ut vero sapiente quod eos labore iure minima tempora itaque! Dolore veniam vero doloribus ratione fugiat eveniet consectetur quo fuga asperiores, aliquam accusantium beatae dolor incidunt odit adipisci voluptate obcaecati quibusdam suscipit laboriosam repellendus qui! Autem laudantium cupiditate in vitae expedita placeat nemo vero minima nulla tempore adipisci nihil alias sunt, quas quidem odit corporis, asperiores ut tempora, quisquam dolores ullam quos! Incidunt ut obcaecati autem. Recusandae maiores dicta consequatur tempora commodi minus excepturi, nulla totam blanditiis qui? Optio doloremque consectetur rerum ullam, deleniti nisi praesentium eaque aut cum! Porro consectetur ex, asperiores quia magnam culpa atque laboriosam natus rem, nulla ea non. Iste eveniet minima, nesciunt voluptas repellendus dolore mollitia provident inventore similique. Odit doloribus, vero neque explicabo asperiores reprehenderit reiciendis ea illo maiores perferendis odio debitis minima voluptates ducimus totam cupiditate dignissimos aut nemo saepe architecto sunt iure accusantium. Sed reiciendis, nesciunt sit cupiditate dolor accusamus consectetur, quaerat optio incidunt ab itaque ipsa quas provident laudantium hic consequatur voluptatibus? Excepturi possimus reprehenderit et, harum vel quisquam mollitia consequatur ut quas sit? Fuga, qui impedit maxime id asperiores neque? Est expedita officiis obcaecati harum blanditiis pariatur ab! Ad quam earum asperiores. Doloremque incidunt possimus similique ea exercitationem. Ullam, itaque! Officiis aut impedit hic nemo? Reprehenderit, eum assumenda voluptatibus vel temporibus ipsam quasi earum saepe ad. Laudantium incidunt dolorum in voluptate a, delectus ab. Quis veniam molestias autem repudiandae deserunt dignissimos voluptatem, vero odio cupiditate odit voluptates dolorem voluptate sequi reprehenderit laboriosam. Modi ex temporibus, laudantium eligendi nostrum vel veritatis non quod quidem, omnis velit excepturi amet, quis inventore in ullam cumque quas libero dolores quae accusantium tempore voluptates quaerat. Explicabo ratione adipisci, vero nesciunt accusamus magnam quae iure voluptas, optio quis excepturi nostrum est! Consequuntur ea unde, minus incidunt recusandae laboriosam dolorem odio molestiae, nobis, repudiandae molestias. Vitae, dolores! Expedita, quasi. Odit nemo deleniti nisi suscipit, molestiae sunt dignissimos ullam. Voluptatum laboriosam voluptates velit blanditiis maiores adipisci commodi autem qui explicabo magnam. Dolores tenetur quaerat ad saepe, nostrum quisquam tempora assumenda atque debitis illum at id magni! Dignissimos eos nobis aliquid ratione, odit corrupti! Error quidem asperiores perferendis soluta, ullam eveniet saepe perspiciatis modi illum tenetur esse officiis, consequuntur magni pariatur sunt animi ex blanditiis explicabo repellat corrupti! Consectetur eveniet corporis architecto, repudiandae fugit itaque cumque eligendi laudantium quas culpa quidem assumenda, eum mollitia veritatis obcaecati aliquid quos ea alias?
-                </p>
-             </section>
+                <div class="security-option">
+                  <div class="security-option-side-1">
+                    <p>Change Password</p>
+                    <p>Last changed 3 months ago</p>
+                  </div>
 
-       </div>
+                  <button class="change-btn">Update Password</button>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="security-option">
+                  <div class="security-option-side-1">
+                    <p>Enable Two-Factor Authentication</p>
+                    <p>SMS or authenticator app</p>
+                  </div>
+
+                  <div class="security-toggle toggle-btn">
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <div class="slider round"></div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="security-option">
+                  <div class="security-option-side-1">
+                    <p>Active Sessions</p>
+                    <p>2 device logged in</p>
+                  </div>
+
+                  <button class="change-btn">Manage</button>
+                </div>
+              </div>
+
+              <!-- Notification -->
+              <div class="notification">
+                <div class="nofication-header">
+                  <h2>Notifications</h2>
+                </div>
+
+                <div class="notification-option">
+                  <div class="notification-option-side-1">
+                    <p>Transaction Alerts</p>
+                  </div>
+
+                  <div class="notification-toggle toggle-btn">
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <div class="slider round"></div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="notification-option">
+                  <div class="notification-option-side-1">
+                    <p>Low Balance Warning</p>
+                  </div>
+
+                  <div class="notification-toggle toggle-btn">
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <div class="slider round"></div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="notification-option">
+                  <div class="notification-option-side-1">
+                    <p>Monthly Statements</p>
+                  </div>
+
+                  <div class="notification-toggle toggle-btn">
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <div class="slider round"></div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="notification-option">
+                  <div class="notification-option-side-1">
+                    <p>Promotional emails</p>
+                  </div>
+
+                  <div class="notification-toggle toggle-btn">
+                    <label class="switch">
+                      <input type="checkbox" />
+                      <div class="slider round"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Account actions -->
+              <div class="account-actions">
+                <div class="account-actions-header">
+                  <h2>Account Actions</h2>
+                </div>
+
+                <div class="account-actions-body">
+                  <button>Download My Data</button>
+                  <button>Close Account</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- mobile html element -->
+      <div class="mobile-sub-container">
+        <!-- navigation -->
+        <div class="mobile-navigation">
+          <ul>
+            <li>
+              <a href="">
+                <i class="fa-solid fa-diamond"></i>
+                <p>Home</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                <span class="material-symbols-outlined">north_east</span>
+                <p>Transfer</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                <i class="fas fa-history"></i>
+                <p>History</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                <i class="fas fa-gear"></i>
+                <p>Profile</p>
+              </a>
+            </li>
+
+            <li>
+              <a href="">
+                <i class="fas fa-arrow-right"></i>
+                <p>Logout</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- mobile header -->
+        <div class="mobile-header">
+          <p>Account</p>
+          <h2>Profile & Settings</h2>
+        </div>
+
+        <!-- mobile user info -->
+        <div class="mobile-user-info">
+          <div class="mobile-user-img">
+            <i class="fas fa-user"></i>
+          </div>
+
+          <div class="mobile-name">
+            <h2>John Doe</h2>
+            <p>Member since Jan 2024</p>
+            <div class="verified">✓ verified</div>
+          </div>
+        </div>
+
+        <!-- mobile personal info -->
+        <div class="mobile-personal-info">
+          <h2>Personal Info</h2>
+
+          <div class="mobile-personal-info-bdy">
+            <!-- full name -->
+            <div class="mobile-personal-option">
+              <div class="mobile-personal-option-side-1">
+                <div class="mobile-personal-icon">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="mobile-personal-info">
+                  <p>Full Name</p>
+                  <span>John Doe</span>
+                </div>
+              </div>
+
+              <div class="mobile-option-side-2">
+                <i class="fas fa-angle-right"></i>
+              </div>
+            </div>
+
+            <div class="line"></div>
+
+            <!-- email -->
+            <div class="mobile-personal-option">
+              <div class="mobile-personal-option-side-1">
+                <div class="mobile-personal-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="mobile-personal-info">
+                  <p>Email</p>
+                  <span>john.doe@example.com</span>
+                </div>
+              </div>
+
+              <div class="mobile-option-side-2">
+                <i class="fas fa-angle-right"></i>
+              </div>
+            </div>
+
+            <div class="line"></div>
+
+            <!-- phone number -->
+            <div class="mobile-personal-option">
+              <div class="mobile-personal-option-side-1">
+                <div class="mobile-personal-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="mobile-personal-info">
+                  <p>Phone Number</p>
+                  <span>+1 (555) 123-4567</span>
+                </div>
+              </div>
+
+              <div class="mobile-option-side-2">
+                <i class="fas fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security -->
+        <div class="mobile-security">
+          <h2>Security</h2>
+
+          <div class="mobile-security-bdy">
+            <!-- change password -->
+            <div class="mobile-security-option">
+              <div class="mobile-security-option-side-1">
+                <div class="mobile-security-icon">
+                  <i class="fas fa-lock"></i>
+                </div>
+                <div class="mobile-security-info">
+                  <p>Change Password</p>
+                  <span>Last changed 3 months ago</span>
+                </div>
+              </div>
+
+              <div class="mobile-security-option-side-2">
+                <i class="fas fa-angle-right"></i>
+              </div>
+            </div>
+
+            <div class="line"></div>
+
+            <!-- two factor authentication -->
+            <div class="mobile-security-option">
+              <div class="mobile-security-option-side-1">
+                <div class="mobile-security-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+
+                <div class="mobile-security-info">
+                  <p>Enable Two-Factor Authentication</p>
+                  <span>SMS or authenticator app</span>
+                </div>
+              </div>
+
+              <div class="security-toggle toggle-btn">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+
+            <div class="line"></div>
+
+            <!-- active sessions -->
+            <div class="mobile-security-option">
+              <div class="mobile-security-option-side-1">
+                <div class="mobile-security-icon">
+                  <i class="fas fa-desktop"></i>
+                </div>
+
+                <div class="mobile-security-info">
+                  <p>Active Sessions</p>
+                  <span>2 device logged in</span>
+                </div>
+              </div>
+
+              <div class="mobile-security-option-side-2">
+                <i class="fas fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Notification -->
+        <div class="mobile-notification">
+          <h2>Notifications</h2>
+
+          <div class="mobile-notification-bdy">
+            <!-- transaction alerts -->
+            <div class="mobile-notification-option">
+              <div class="mobile-notification-option-side-1">
+                <div class="mobile-notification-icon">
+                  <i class="fas fa-bell"></i>
+                </div>
+                <div class="mobile-notification-info">
+                  <p>Transaction Alerts</p>
+                  <span>Get notified about your transactions</span>
+                </div>
+              </div>
+
+              <div class="notification-toggle toggle-btn">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+
+            <div class="line"></div>
+
+            <!-- low balance warning -->
+            <div class="mobile-notification-option">
+              <div class="mobile-notification-option-side-1">
+                <div class="mobile-notification-icon">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="mobile-notification-info">
+                  <p>Low Balance Warning</p>
+                  <span>Get notified when your balance is low</span>
+                </div>
+              </div>
+
+              <div class="notification-toggle toggle-btn">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+
+            <div class="line"></div>
+
+            <!-- monthly statements -->
+            <div class="mobile-notification-option">
+              <div class="mobile-notification-option-side-1">
+                <div class="mobile-notification-icon">
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <div class="mobile-notification-info">
+                  <p>Monthly Statements</p>
+                  <span>Receive your monthly account statements</span>
+                </div>
+              </div>
+
+              <div class="notification-toggle toggle-btn">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+
+            <div class="line"></div>
+            <!-- Promotional emails -->
+            <div class="mobile-notification-option">
+              <div class="mobile-notification-option-side-1">
+                <div class="mobile-notification-icon">
+                  <i class="fas fa-mail-bulk"></i>
+                </div>
+                <div class="mobile-notification-info">
+                  <p>Promotional Emails</p>
+                  <span>Get the latest offers and updates</span>
+                </div>
+              </div>
+
+              <div class="notification-toggle toggle-btn">
+                <label class="switch">
+                  <input type="checkbox" />
+                  <div class="slider round"></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-</body>
+
+    <script>
+      let toggles = document.querySelectorAll(".switch input");
+      let toggleBtn = document.querySelectorAll(".toggle-btn");
+      let slider = document.querySelectorAll(".round");
+
+      let settings = localStorage.getItem("status")
+        ? JSON.parse(localStorage.getItem("status"))
+        : [];
+      toggles.forEach((toggle, index) => {
+        if (settings.includes(index)) {
+          toggle.checked = true;
+          toggleBtn[index].style.backgroundColor = "var(--primary)";
+          slider[index].style.transform = "translateX(20px)";
+        }
+
+        toggle.addEventListener("change", function () {
+          if (this.checked) {
+            settings.push(index);
+            let set_item = localStorage.setItem(
+              "status",
+              JSON.stringify(settings),
+            );
+            toggleBtn[index].style.backgroundColor = "var(--primary)";
+            slider[index].style.transform = "translateX(20px)";
+          } else {
+            let get_item = localStorage.getItem("status");
+            let items = JSON.parse(get_item);
+            items = items.filter((item) => item !== index);
+            let remove_item = localStorage.setItem(
+              "status",
+              JSON.stringify(items),
+            );
+            settings = items;
+            toggleBtn[index].style.backgroundColor = "var(--bg-light)";
+            slider[index].style.transform = "translateX(0)";
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
