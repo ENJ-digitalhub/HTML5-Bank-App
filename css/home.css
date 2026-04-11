@@ -1,0 +1,328 @@
+:root {
+    /* COLORS */
+    --bg-main: #0d0d0d;          /* main background (deep black) */
+    --bg-secondary: #1a1a1a;     /* dashboards / sections */
+    --bg-light: #262626;         /* hover / subtle areas */
+
+    --primary: #ff7a00;          /* orange main */
+    --primary-hover: #ff9333;    /* lighter orange */
+    --primary-dark: #cc6200;     /* darker orange */
+
+    --text-main: #ffffff;        /* main text */
+    --text-secondary: #b3b3b3;   /* secondary text */
+    --text-muted: #808080;       /* low emphasis */
+
+    --border-color: #333333;
+
+    /* STATUS COLORS */
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+
+    /* SHADOW */
+    --shadow-soft: 0 4px var(--padding-md) rgba(0, 0, 0, 0.4);
+    --shadow-strong: 0 8px 20px rgba(0, 0, 0, 0.7);
+
+    /* BORDER RADIUS */
+    --radius-sm: 6px;
+    --radius-md: var(--padding-md);
+    --radius-lg: 16px;
+
+    /* SPACING */
+    --padding-sm: 8px;
+    --padding-md: 16px;
+    --padding-lg: 24px;
+
+    /* FONT */
+    --font-main: 'Poppins', sans-serif;
+
+    /* TRANSITIONS */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-smooth: 0.4s ease;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    color: var(--text-muted);
+}
+
+/* dashboard STYLES*/
+
+html{
+    background: var(--bg-main);
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    background: transparent;
+    height: 100%;
+}
+
+header{
+    /* border: 3px solid red; */
+    border-bottom:3px solid var(--bg-secondary);
+    padding-inline: var(--padding-lg);
+    padding-block: var(--padding-md);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header h3{
+    color: var(--primary);
+}
+
+header img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+nav{
+    padding-inline: var(--padding-lg);
+    padding-block: var(--padding-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+    /* align-items: center; */
+    background: var(--bg-secondary);
+    /* height: 100%; */
+    width: 20%;
+}
+
+nav h5{
+    font-size: var(--padding-md);
+    font-weight: bolder;
+    color: var(--text-muted);
+}
+
+nav p,
+nav i,
+nav span{
+    color: var(--text-muted);
+}
+
+nav p:hover,
+nav i:hover,
+nav span:hover{
+    color: var(--text-main);
+}
+
+section{
+    margin-inline: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+}
+
+.title h5{
+    /* margin-block: var(--padding-sm); */
+    color: var(--primary);
+    letter-spacing: var(--padding-sm);
+    padding-top: var(--padding-sm);
+}
+
+.dashboard{
+    background: var(--bg-light);
+    padding-inline: var(--padding-lg);
+    padding-block: var(--padding-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard .circle{
+    width: 200px;
+    height: 200px;
+    background: var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    top: -40px;
+    opacity: 20%;
+}
+
+.dashboard .balance{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.dashboard .balance p span.amount{
+    font-size: 50px;
+    color: var(--text-main);
+}
+
+.dashboard .balance p span.currency{
+    font-size: 50px;
+    color: var(--primary);
+}
+
+.dashboard .balance p span.decimal{
+    font-size: 30px;
+}
+
+.dashboard div{
+    /* border: 3px solid red; */
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding-md);
+    justify-content: center;
+}
+
+.dashboard div button{
+    border: 2px solid var(--primary);
+    background: transparent;
+    font-weight: bold;
+    padding-block: var(--padding-sm);
+    padding-inline: var(--padding-lg);
+}
+
+.dashboard div button:hover{
+    background: var(--primary-hover);
+    color: var(--bg-secondary);
+}
+
+.dashboard div button:active{
+    background: var(--primary);
+    color: var(--bg-main);
+}
+
+.dashboard2{
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding-md);
+    justify-content: space-between;
+}
+
+.dashboard2 div{
+    flex: 1;
+    background: var(--bg-light);
+    padding-inline: var(--padding-lg);
+    padding-block: var(--padding-lg);
+}
+
+.dashboard2 div p.amt{
+    font-size: 35px;
+}
+
+.dashboard2 div p.amt1{
+    color: var(--primary);
+}
+
+.dashboard2 div p.amt2{
+    color: rgb(118, 207, 118);
+}
+
+.dashboard2 div p.amt3{
+    color: var(--text-main);
+}
+
+.recent{
+    background: var(--bg-light);
+}
+
+.recent .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recent .header h2{
+    padding-left: var(--padding-lg);
+    padding-block: var(--padding-sm);
+    color: var(--text-main);
+}
+
+.recent .header p,
+.recent .header p i{
+    padding-right: var(--padding-lg);
+    padding-block: var(--padding-sm);
+    color: var(--primary-dark);
+}
+
+.recent hr{
+    border: 3px solid var(--bg-main);
+}
+
+.transaction{
+    padding-inline: var(--padding-lg);
+}
+
+.tcontent{
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding-md);
+    justify-content: space-between;
+    padding-block: var(--padding-sm);
+    align-items: center;
+}
+
+.transaction div{
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding-md);
+    align-items: center;
+}
+
+.transaction div .icon{
+    border: 2px solid var(--border-color);
+    background: var(--bg-main);
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction div .label{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+}
+
+.transaction div div h4{
+    font-size: var(--padding-lg);
+    color: var(--text-main);
+}
+
+.transaction div div p{
+    color: var(--text-muted);
+    font-size: var(--padding-md);
+}
+
+.tcontent .details{
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding-sm);
+    align-items: center;
+}
+
+.details .status{
+    background: var(--primary-dark);
+    color: var(--text-main);
+    padding-inline: var(--padding-sm);
+    border-radius: var(--radius-sm);
+    opacity: 0.5;
+}
+
+.transaction p.amount{
+    font-weight: bold;
+    color: var(--primary);
+    font-size: var(--padding-lg);
+}
