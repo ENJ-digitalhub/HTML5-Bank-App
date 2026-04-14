@@ -1,46 +1,3 @@
-:root {
-    /* COLORS */
-    --bg-main: #0d0d0d;          /* main background (deep black) */
-    --bg-secondary: #1a1a1a;     /* dashboards / sections */
-    --bg-light: #262626;         /* hover / subtle areas */
-
-    --primary: #ff7a00;          /* orange main */
-    --primary-hover: #ff9333;    /* lighter orange */
-    --primary-dark: #cc6200;     /* darker orange */
-
-    --text-main: #ffffff;        /* main text */
-    --text-secondary: #b3b3b3;   /* secondary text */
-    --text-muted: #808080;       /* low emphasis */
-
-    --border-color: #333333;
-
-    /* STATUS COLORS */
-    --success: #28a745;
-    --danger: #dc3545;
-    --warning: #ffc107;
-
-    /* SHADOW */
-    --shadow-soft: 0 4px var(--padding-md) rgba(0, 0, 0, 0.4);
-    --shadow-strong: 0 8px 20px rgba(0, 0, 0, 0.7);
-
-    /* BORDER RADIUS */
-    --radius-sm: 6px;
-    --radius-md: var(--padding-md);
-    --radius-lg: 16px;
-
-    /* SPACING */
-    --padding-sm: 8px;
-    --padding-md: 16px;
-    --padding-lg: 24px;
-
-    /* FONT */
-    --font-main: 'Poppins', sans-serif;
-
-    /* TRANSITIONS */
-    --transition-fast: 0.2s ease-in-out;
-    --transition-smooth: 0.4s ease;
-}
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -70,6 +27,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 header h3{
@@ -81,6 +39,7 @@ header img{
     height: 50px;
     border-radius: 50%;
     border: 2px solid var(--primary);
+    object-fit: cover;
 }
 
 main{
@@ -189,7 +148,7 @@ section{
     background: transparent;
     font-weight: bold;
     padding-block: var(--padding-sm);
-    padding-inline: var(--padding-lg);
+    width: 200px;
 }
 
 .dashboard div button:hover{
@@ -241,17 +200,17 @@ section{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-inline: var(--padding-md);
+    padding-block: var(--padding-sm);
 }
 
 .recent .header h2{
-    padding-left: var(--padding-lg);
     padding-block: var(--padding-sm);
     color: var(--text-main);
 }
 
 .recent .header p,
 .recent .header p i{
-    padding-right: var(--padding-lg);
     padding-block: var(--padding-sm);
     color: var(--primary-dark);
 }
@@ -267,7 +226,6 @@ section{
 .tcontent{
     display: flex;
     flex-direction: row;
-    gap: var(--padding-md);
     justify-content: space-between;
     padding-block: var(--padding-sm);
     align-items: center;
@@ -276,7 +234,7 @@ section{
 .transaction div{
     display: flex;
     flex-direction: row;
-    gap: var(--padding-md);
+    gap: var(--padding-sm);
     align-items: center;
 }
 
@@ -297,13 +255,11 @@ section{
 }
 
 .transaction div div h4{
-    font-size: var(--padding-lg);
     color: var(--text-main);
 }
 
 .transaction div div p{
     color: var(--text-muted);
-    font-size: var(--padding-md);
 }
 
 .tcontent .details{
@@ -324,5 +280,86 @@ section{
 .transaction p.amount{
     font-weight: bold;
     color: var(--primary);
-    font-size: var(--padding-lg);
 }
+
+@media (max-width: 480px){
+    *{
+        font-size: 12px;
+    }
+
+    html{
+        padding: 0;
+    }
+
+    header img{
+        border-radius: 10px;
+    }
+
+    main{
+        flex-direction: column;
+        padding-block: var(--padding-sm);
+        align-items: center;
+    }
+
+    nav h5{
+        display: none;
+    }
+
+    nav{
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding-inline: var(--padding-sm);
+        padding-block: var(--padding-sm);
+        justify-content: space-between;
+        background: var(--bg-main);
+        z-index: 1000;
+        align-items: center;
+    }
+
+    nav p{
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    h1{
+        font-size: 24px;
+    }
+
+    section{
+        width: 90%;
+        padding-bottom: 100px;
+    }
+
+    .dashboard,
+    .dashboard button,
+    .dashboard2 div,
+    .recent{
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button{
+        padding-inline: var(--padding-sm);
+        font-size: 10px;
+        height: 70px;
+        background: var(--bg-secondary);
+    }
+
+    .dashboard div{
+        gap: var(--padding-sm);
+    }
+
+    .dashboard2 div.pending{
+        display: none;
+    }
+
+    div.transaction{
+        padding-inline:var(--padding-sm) ;
+    }
+
+    h3{
+        font-size: 18px;
+    }
