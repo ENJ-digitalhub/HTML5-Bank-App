@@ -39,6 +39,7 @@ header img{
     height: 50px;
     border-radius: 50%;
     border: 2px solid var(--primary);
+    object-fit: cover;
 }
 
 main{
