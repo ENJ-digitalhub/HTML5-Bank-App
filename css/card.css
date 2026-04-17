@@ -27,6 +27,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 header h3{
@@ -125,11 +126,6 @@ section{
     justify-content: space-evenly;
 }
 
-.details img{
-    width: 500px;
-    border-radius: var(--radius-md);
-}
-
 .details div{
     /* border: 3px solid red; */
     width:90%;
@@ -162,9 +158,24 @@ section{
     background: var(--bg-light);
 }
 
-.recent h2{
-    padding-inline: var(--padding-lg);
+.recent .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: var(--padding-md);
     padding-block: var(--padding-sm);
+}
+
+.recent .header h2{
+    padding-block: var(--padding-sm);
+    color: var(--text-main);
+}
+
+.recent .header p,
+.recent .header p i{
+    padding-block: var(--padding-sm);
+    color: var(--primary-dark);
 }
 
 .recent hr{
@@ -178,23 +189,157 @@ section{
 .tcontent{
     display: flex;
     flex-direction: row;
-    gap: var(--padding-md);
     justify-content: space-between;
     padding-block: var(--padding-sm);
     align-items: center;
 }
 
-.transaction div h4{
-    font-size: var(--padding-lg);
+.transaction div{
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding-sm);
+    align-items: center;
 }
 
-.transaction div p{
+.transaction div .icon{
+    border: 2px solid var(--border-color);
+    background: var(--bg-main);
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction div .label{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+}
+
+.transaction div div h4{
+    color: var(--text-main);
+}
+
+.transaction div div p{
     color: var(--text-muted);
-    font-size: var(--padding-md);
+}
+
+.tcontent .details{
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding-sm);
+    align-items: center;
+}
+
+.details .status{
+    background: var(--primary-dark);
+    color: var(--text-main);
+    padding-inline: var(--padding-sm);
+    border-radius: var(--radius-sm);
+    opacity: 0.5;
 }
 
 .transaction p.amount{
     font-weight: bold;
     color: var(--primary);
-    font-size: var(--padding-lg);
+}
+
+@media (max-width: 480px){
+    *{
+        font-size: 12px;
+    }
+
+    html{
+        padding: 0;
+    }
+
+    header img{
+        border-radius: 10px;
+    }
+
+    main{
+        flex-direction: column;
+        padding-block: var(--padding-sm);
+        align-items: center;
+    }
+
+    nav h5{
+        display: none;
+    }
+
+    nav{
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding-inline: var(--padding-sm);
+        padding-block: var(--padding-sm);
+        justify-content: space-between;
+        background: var(--bg-main);
+        z-index: 1000;
+        align-items: center;
+    }
+
+    nav p{
+        font-size: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav p span.material-symbols-outlined{
+        font-size: 15px;
+    }
+    
+    section{
+        width: 90%;
+        padding-bottom: 100px;
+    }
+
+    .details{
+        padding-inline: 0;
+    }
+
+    .details .card{
+        width: 310px;
+        height: 200px;
+        padding-inline: var(--padding-md);
+    }
+
+    .details .card .number{
+        font-size: 24px;
+    }
+
+    .details div{
+        gap: var(--padding-sm);
+    }
+
+    .details,
+    .recent,
+    .details div button{
+        border-radius: 15px;
+    }
+
+    .recent{
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button{
+        padding-inline: var(--padding-sm);
+        font-size: 10px;
+        height: 70px;
+        background: var(--bg-secondary);
+    }
+
+    div.transaction{
+        padding-inline:var(--padding-sm) ;
+    }
+
+    h3{
+        font-size: 18px;
+    }
 }
