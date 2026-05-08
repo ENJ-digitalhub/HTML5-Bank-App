@@ -61,6 +61,7 @@ main{
     gap: var(--padding-md);
     align-items: center;
     width: 100%;
+    
 }
 
 form.createAccount{

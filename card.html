@@ -43,15 +43,62 @@
                     </div>
                 </div>
                 <div>
-                    <button>Freeze Card</button>
-                    <button>Request New Card</button>
-                    <button>View Details</button>
+                    <button id="js-freezeCard">Freeze Card</button>
+                    <dialog id="js-freezeCardModal">
+                        <p>This card will be temporary blocked for all transactions.</p>
+                        <p>You can unfreeze it anythime.</p>
+                        <h3><i class="fa-solid fa-triangle-exclamation"></i> What will be disabled:</h3>
+                        <ul>
+                            <li>ATM withdrawals</li>
+                            <li>Online payments</li>
+                            <li>Pos payments</li>
+                        </ul>
+                        <div class="notify">
+                            <p>Notify me when card is used</p>
+                            <label for="">
+                                <div class="toggle"><div></div><!--tOGGLE SWITCH--></div>
+                            </label>
+                        </div>
+                        <div class="dialogButton">
+                            <button id="js-close">Cancel</button>
+                            <button id="js-submit">Freeze Card</button>
+                        </div>
+                    </dialog>
+                    <button id="js-requestNewCard">Request New Card</button>
+                    <dialog id="js-requestNewCardModal">
+                        <h3>Request a new card</h3>
+                        <select name="requestReason" id="">
+                            <option value="">Reason for request</option>
+                            <option value="lost-card">Lost Card</option>
+                            <option value="damaged-card">Damaged Card</option>
+                            <option value="expired card">Expired Card</option>
+                            <option value="upgrade">Upgrade</option>
+                        </select>
+
+                        <p>Delivery option</p>
+                        <div>
+                            <input type="radio" name="delivery" id="deliveryPickup">
+                            <label for="deliveryPickup">Pickup</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="delivery" id="deliveryHome">
+                            <label for="deliveryHome">Home Delivery</label>
+                        </div>
+                        <h5>Fee Information</h5>
+                        <p>NX may apply</p>
+                        <p><i class="fa-solid fa-triangle-exclamation"></i> Current card will be deactivated once new one is issued</p>
+                        <div class="dialogButton">
+                            <button id="js-close">Cancel</button>
+                            <button id="js-submit">Submit Request</button>
+                        </div>
+                    </dialog>
+                    <button id="js-viewDetails">View Details</button>
                 </div>
             </div>
             <div class="recent">
                 <div class="header">
                     <h2>Recent Transactions</h2>
-                    <p>view all <i class="fa-solid fa-arrow-right"></i></p>
+                    <a href="/card_transactions.html">view all <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <hr>
                 <div class="transaction">
@@ -62,7 +109,7 @@
                             </div>
                             <div class="label">
                                 <h4>Amazon</h4>
-                                <p>28 Mar, 2026 06:45 PM</p>
+                                <p>28 Mar, 2026 <br>06:45 PM</p>
                             </div>
                         </div>
                         <div class="details">
@@ -72,8 +119,48 @@
                     </div>
                     <hr>
                 </div>
+
+                <div class="transaction">
+                    <div class="tcontent">
+                        <div>
+                            <div class="icon">
+                                <i class="fa-solid fa-sack-dollar"></i>
+                            </div>
+                            <div class="label">
+                                <h4>Salary</h4>
+                                <p>25 Mar, 2026 <br>10:00 AM</p>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <p class="amount">+ $1,200.00</p>
+                            <p class="status">Successful</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="transaction">
+                    <div class="tcontent">
+                        <div>
+                            <div class="icon">
+                                <i class="fa-brands fa-spotify"></i>
+                            </div>
+                            <div class="label">
+                                <h4>Spotify</h4>
+                                <p>24 Mar, 2026 <br>11:15 AM</p>
+                            </div>
+                        </div>
+                        <div class="details">
+                            <p class="amount">- $4.99</p>
+                            <p class="status">Successful</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
         </section>
     </main>
+
+    <script src="js/card.js"></script>
 </body>
 
 </html>

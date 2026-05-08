@@ -45,6 +45,7 @@ header img{
 main{
     display: flex;
     flex-direction: row;
+    height: fit-content;
 }
 
 nav{
@@ -110,7 +111,7 @@ section{
     padding-inline: var(--padding-lg);
     background-image: url(../media/img/card.png);
     background-size: cover;
-    -webkit-text-stroke: 1px black;
+    /* -webkit-text-stroke: 1px black; */
     font-weight: bolder;
 }
 
@@ -173,8 +174,8 @@ section{
     color: var(--text-main);
 }
 
-.recent .header p,
-.recent .header p i{
+.recent .header a,
+.recent .header a i{
     padding-block: var(--padding-sm);
     color: var(--primary-dark);
 }
@@ -246,6 +247,71 @@ section{
     color: var(--primary);
 }
 
+dialog{
+    background: var(--bg-main);
+    width:50%;
+    height: 600px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 20px;
+    padding: var(--padding-lg);
+    justify-content: center;
+    align-items: center;
+}
+
+dialog li{
+    list-style: inside;
+}
+
+.dialogActive{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.details dialog div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+dialog select{
+    background: var(--bg-main);
+    border: 2px solid var(--border-color);
+    padding: var(--padding-sm);
+    width: 100%;
+    border-radius: var(--radius-sm);
+}
+
+dialog div.notify{
+    justify-content: space-between;
+}
+
+.dialogButton{
+    display: flex;
+    align-self: center;
+}
+
+dialog .toggle{
+    height: 20px;
+    width: 40px;
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+
+.toggle div{
+    height: 20px;
+    width: 20px;
+    background: var(--bg-main);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+}
+
 @media (max-width: 480px){
     *{
         font-size: 12px;
@@ -306,7 +372,7 @@ section{
     .details .card{
         width: 310px;
         height: 200px;
-        padding-inline: var(--padding-md);
+        padding-inline: var(--padding-sm);
     }
 
     .details .card .number{
@@ -342,5 +408,8 @@ section{
 
     h3{
         font-size: 18px;
+    }
+    dialog{
+        width: 100%;
     }
 }
