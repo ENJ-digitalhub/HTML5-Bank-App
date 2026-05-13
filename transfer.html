@@ -36,7 +36,7 @@
                 <h1>Send Money</h1>
             </div>
             <div class="label">
-                <div><span>1</span> Recipient</div>
+                <div><span class="active">1</span> Recipient</div>
                 <div class="hr">
                     <hr>
                 </div>
@@ -48,7 +48,7 @@
             </div>
             <div class="display">
                 <div class="content">
-                    <div class="sections recipient">
+                    <div class="sections recipient" id="js-recipient">
                         <h5>01 - Recipient Details</h5>
                         <label for="accountNo">Account Number</label><br>
                         <input type="text" placeholder="Enter account number" id="accountNo"><br>
@@ -64,22 +64,22 @@
                             <label for="beneficiary">Add to beneficiaries</label><br>
                         </div>
                         <div class="btn">
-                            <button class="cancel">Cancel</button>
-                            <button class="next">Next</button>
+                            <button class="cancel" id="js-recipientCancel">Cancel</button>
+                            <button class="next" id="js-recipientNext">Next</button>
                         </div>
                     </div>
-                    <div class="sections amount">
+                    <div class="sections amount" id="js-amount">
                         <h5>02 - Amount & Note</h5>
                         <label for="amount">Amount (NGN)</label><br>
                         <input type="text" placeholder="Enter amount" id="amount"><br>
                         <label for="notes">Notes (Optional)</label><br>
                         <textarea type="text" placeholder="Enter notes" id="notes"></textarea><br>
                         <div class="btn">
-                            <button class="back">Back</button>
-                            <button class="next">Next</button>
+                            <button class="back" id="js-amountBack">Back</button>
+                            <button class="next" id="js-amountNext">Next</button>
                         </div>
                     </div>
-                    <div class="sections confirm">
+                    <div class="sections confirm" id="js-confirm">
                         <h5>03 - Review & Confirm</h5>
                         <div class="details">
                             <span>To</span><span class="description">John Doe .......4821</span>
@@ -102,14 +102,15 @@
                         </div>
                         <hr>
                         <div class="btn">
-                            <button class="confirm">Confirm & Send</button>
-                            <button class="cancel">Cancel</button>
+                            <button class="confirm" id="js-confirmSubmit">Confirm & Send</button>
+                            <button class="cancel" id="js-confirmBack">Back</button>
                         </div>
                     </div>
                 </div>          
             </div>
         </section>
     </main>
+    <script src="/js/transfer.js"></script>
 </body>
 
 </html>

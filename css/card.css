@@ -294,17 +294,47 @@ dialog div.notify{
     align-self: center;
 }
 
-dialog .toggle{
-    height: 20px;
-    width: 40px;
-    background: var(--bg-light);
-    border-radius: 10px;
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
 }
 
-.toggle div{
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
     height: 20px;
     width: 20px;
-    background: var(--bg-main);
+    left: 3px;
+    bottom: 2.5px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary);
+}
+
+input:checked + .slider::before {
+    transform: translateX(24px);
 }
 
 dialog::backdrop {
