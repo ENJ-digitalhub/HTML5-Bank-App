@@ -7,7 +7,7 @@ recipientNext = document.getElementById("js-recipientNext");
 
 recipientCancel.addEventListener('click', () => {
     console.log(recipientCancel, "clicked");
-    window.location.href = "/index.html";
+    window.location.href = "/home.html";
 }); 
 
 recipientNext.addEventListener('click', () => {
@@ -49,6 +49,6 @@ confirmBack.addEventListener('click', () => {
 confirmSubmit.addEventListener('click', () => {
     console.log(confirmSubmit, "clicked");
     alert("Transfer Successful");
-    window.location.href = "/index.html";
+    window.location.href = "/home.html";
 });
 
